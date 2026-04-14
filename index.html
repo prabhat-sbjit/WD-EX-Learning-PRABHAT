@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BATTLEFIELD - War Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+
+  <div class="logo"><img src="photos/battl2042.png" height="50" width="150" alt="BATTLEFIELD Logo"></div>
+
+  <nav>
+    <a href="#trailer">Game   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 15 16">
+  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+</svg></a> 
+                              
+    <a href="#features">Modes</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#inventory">Armoury</a>
+    <a href="#signup">Enlist</a>
+    <a href="#support">T&C Support</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="#">LOGIN</a>
+    <button>PLAY NOW</button>
+  </div>
+
+</header>
+<style>
+    /* NAVBAR */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);   /* center horizontally */
+
+  width: 90%;        /* not full width */
+  max-width: 1200px; /* limit size */
+
+  
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+
+  z-index: 10;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* NAV LINKS */
+.navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.nav-right button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.hero {
+
+  height: 100vh;
+  position: relative;
+}
+</style> 
+<center>
+
+    <!-- Header -->
+    <section class="hero">
+
+  <div class="hero-content">
+    <h1>BATTLEFIELD 2042</h1>
+    <p>Enter the battlefield and dominate with strategy, power and skill.</p>
+    <button>EXPLORE NOW</button>
+  </div>
+
+</section>
+
+<style>/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url("photos/navyseal.png") no-repeat center/cover;
+  position: relative;
+  color: white;
+  filter: brightness(1.3) contrast(1.1);
+}
+
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+}
+
+/* TEXT CONTENT */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* BIG TITLE */
+.hero h1 {
+  font-size: 80px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+/* SUBTEXT */
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* BUTTON */
+.hero button {
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero button:hover {
+  background: white;
+  color: black;
+}
+</style>
+<div class="divider-line"></div>
+<style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+
+    
+
+    <!-- Navigation -->
+    
+   
+
+    <!-- Trailer -->
+    <section id="trailer">
+        <h2>🎥 Official War Trailer</h2>
+
+        <video width="1300px" height="650px" controls loop autoplay muted >
+            <source src="photos/trailervideo.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <hr width="100%" color="#0a1a2f">
+
+    <!-- Features -->
+    <section id="features">
+        <h2><font color="white">War Modes</font></h2>
+
+        <table border="1" cellpadding="12" width="70%" bgcolor="#e6f2ff" >
+            <tr>
+                <th><font color="white">Mode</font></th>
+                <th><font color="white">Description</font></th>
+            </tr>
+
+            <tr>
+                <td><font color="white">Conquest BR</font></td>
+                <td><font color="white">Capture and control key locations across the battlefield</font></td>
+            </tr>
+
+            <tr>
+                <td><font color="white">Team Deathmatch</font></td>
+                <td><font color="white">Fast-paced combat between two teams</font></td>
+            </tr>
+
+            <tr>
+                <td><font color="white">Operations</font></td>
+                <td><font color="white">Large-scale missions with strategic objectives</font></td>
+            </tr>
+
+            <tr>
+                <td><font color="white">Survival</font></td>
+                <td><font color="white">Fight endless enemy waves and survive</font></td>
+            </tr>
+            <tr>
+                <td><font color="white">Gun Game</font></td>
+                <td><font color="white">Progress through a series of weapons and abilities</font></td>
+            </tr>
+            <tr>
+                <td><font color="white">Quick Match</font></td>
+                <td><font color="white">Fast-paced combat between two teams</font></td>
+            </tr>
+            <tr>
+                <td><font color="white">Sniper Training</font></td>
+                <td><font color="white">Practice precision shooting and long-range combat with sniper rifles</font></td>
+            </tr>
+            <tr>
+                <td><font color="white">Capture the Flag</font></td>
+                <td><font color="white">Control the enemy flag and return it to your base</font></td>
+            </tr>
+            <tr>
+                <td><font color="white">Zombie Mode</font></td>
+                <td><font color="white">Survive waves of zombie enemies</font></td>
+            </tr>
+        </table>
+    </section>
+
+    
+    <!-- Vehicles -->
+    <section id="vehicles">
+        <h2><font color="white">Vehicles</font></h2>
+
+        <table border="1" cellpadding="12" width="70%" bgcolor="#e6f2ff" >
+            <tr>
+                <th><font color="white">Vehicle</font></th>
+                <th><font color="white">Use</font></th>
+            </tr>
+
+            <tr>
+                <td><font color="white">Fighter Jet</font></td>
+                <td><font color="white">Air superiority and bombing missions</font></td>
+            </tr>
+
+            <tr>
+                <td><font color="white">Tank</font></td>
+                <td><font color="white">Heavy ground assault</font></td>
+            </tr>
+
+            <tr>
+                <td><font color="white">Helicopter</font></td>
+                <td><font color="white">Quick deployment and aerial attacks</font></td>
+            </tr>
+        </table>
+    </section>
+ <div class="divider-line"></div>
+<style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+    <style>
+      
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #0b1220, #020617);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* SECTION HEADINGS */
+h2 {
+  text-align: center;
+  color: white;
+  margin: 30px 0 15px;
+}
+
+/* TABLE STYLE */
+table {
+  width: 85%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* TABLE HEAD */
+th {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  font-size: 16px;
+  color: #e0e7ff;
+}
+
+/* TABLE DATA */
+td {
+  padding: 12px;
+  color: #cbd5f5;
+}
+
+/* ROW BORDER */
+tr {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER EFFECT */
+tr:hover {
+  background: rgba(168, 85, 247, 0.15);
+  transition: 0.3s;
+}
+
+/* REMOVE LAST BORDER */
+tr:last-child {
+  border-bottom: none;
+}
+
+/* ADD GLOW BORDER */
+table {
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+    </style>
+
+    
+
+    <!-- Gallery -->
+     <div class="gallery">
+    <section id="gallery">
+        <h2> Battlefield Gallery</h2>
+        <div class="gallery">
+
+  <!-- ROW 1 -->
+  <div class="row row1">
+
+    <div class="card">
+      <img src="photos/combatline.jpg">
+      <p>Frontline Combat</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/tank.jpg">
+      <p>Tank Assault</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/jet.jpg">
+      <p>Air Strike Mission</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/abc.jpg" height="200">
+      <p>Surgical Strike</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/sky.jpg">
+      <p>With Commander</p>
+    </div>
+
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row row2">
+
+    <div class="card">
+      <img src="photos/helicop.jpg">
+      <p>Payload Mode</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/ship.jpg">
+      <p>Battle Ship</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/shipp.jpg">
+      <p>Surgical Strike</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/character.jpg">
+      <p>Game Lobby</p>
+    </div>
+
+    <div class="card">
+      <img src="photos/helipad.jpg">
+      <p>Chopper</p>
+    </div>
+
+  </div>
+
+</div>
+
+        
+    </section>
+     </div>
+
+     <div class="divider-line"></div>
+<style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+
+     <style>
+      /* BACKGROUND */
+.gallery {
+  background: linear-gradient(to bottom, #0b0f1a, #111827);
+  padding: 45px 0;
+  overflow: hidden;
+}
+
+/* ROW STYLE */
+.row {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
+
+/* IMAGE CARD */
+.row img {
+  width: 350px;
+  border-radius: 10px;
+  transition: 0.4s;
+  border: 2px solid transparent;
+}
+
+/* GLOW EFFECT */
+.row img:hover {
+  transform: scale(1.05);
+  border: 2px solid #a855f7;
+  box-shadow: 0 0 20px rgba(168,85,247,0.8);
+}
+
+/* TEXT BELOW */
+.row p {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+/* ANIMATION ROW 1 (RIGHT → LEFT) */
+.row1 {
+  animation: moveRight 20s linear infinite;
+}
+
+/* ANIMATION ROW 2 (LEFT → RIGHT) */
+.row2 {
+  animation: moveRight 20s linear infinite;
+}
+
+/* KEYFRAMES */
+
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+     </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+<style>
+
+
+
+#inventory {
+  margin-top: 0;
+}
+
+/* vertical sections */
+#inventory .armoury-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#inventory h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 44px;              /* bigger */
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: capitalize;
+  color:white;
+   text-shadow: 
+    0 0 10px rgba(168,85,247,0.8),
+    0 0 20px rgba(168,85,247,0.6);
+
+  margin-bottom: 0;
+}
+
+/* section title */
+#inventory h2 {
+  text-align: center;
+  margin-bottom: 0;
+  color: white;
+}
+
+/* wrapper */
+#inventory .scroll-wrapper {
+  position: relative;
+}
+
+/* horizontal scroll */
+#inventory .card-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 5px;
+}
+
+/* hide scrollbar */
+#inventory .card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* cards */
+#inventory .card {
+  min-width: 340px;
+  height: 250px;
+  background: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+#inventory .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+#inventory .card p {
+  position: relative;
+  top: -02px;          /* move text UP into black strip */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* arrows */
+#inventory .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+#inventory .left {
+  left: 5px;
+}
+
+#inventory .right {
+  right: 5px;
+}
+#inventory {
+  background:linear-gradient(
+  to top,
+  #2a1a4a,
+    #0f062c,
+    #2a1a4a
+  )
+}
+</style>
+</head>
+
+<body>
+
+<section id="inventory">
+
+  <h1 style="text-align:center;">Armoury Inventory</h1>
+
+  <div class="armoury-slider">
+
+    <!-- Aircraft -->
+    <div>
+      <h2>Aircraft</h2>
+
+      <div class="scroll-wrapper">
+        <a href="#a1" class="arrow left">❮</a>
+        <a href="#a9" class="arrow right">❯</a>
+
+        <div class="card-container">
+          <div id="a1" class="card"><img src="photos/f22.jpg"><p>F-22</p></div>
+          <div class="card"><img src="photos/f35.jpg"><p>F-35</p></div>
+          <div class="card"><img src="photos/felon.jpg"><p>Felon</p></div>
+          <div class="card"><img src="photos/b2spirit.png"><p>B-2</p></div>
+          <div class="card"><img src="photos/f15eagle.png"><p>F-15</p></div>
+          <div class="card"><img src="photos/rafale.png"><p>Rafale</p></div>
+          <div class="card"><img src="photos/fa18.png"><p>F/A-18</p></div>
+          <div class="card"><img src="photos/mig29.png"><p>MiG-29</p></div>
+          <div id="a9" class="card"><img src="photos/eurofighter.png"><p>Eurofighter</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tanks -->
+    <div>
+      <h2>Tanks</h2>
+
+      <div class="scroll-wrapper">
+        <a href="#t1" class="arrow left">❮</a>
+        <a href="#t9" class="arrow right">❯</a>
+
+        <div class="card-container">
+          <div id="t1" class="card"><img src="photos/m1a2.png"><p>Abrams</p></div>
+          <div class="card"><img src="photos/t90.png"><p>T-90</p></div>
+          <div class="card"><img src="photos/lecr.png"><p>Leclerc</p></div>
+          <div class="card"><img src="photos/challenge.png"><p>Challenger</p></div>
+          <div class="card"><img src="photos/leopard.png"><p>Leopard</p></div>
+          <div class="card"><img src="photos/type.png"><p>Type 90</p></div>
+          <div class="card"><img src="photos/k2.png"><p>K2</p></div>
+          <div class="card"><img src="photos/mk4.png"><p>Merkava</p></div>
+          <div id="t9" class="card"><img src="photos/t14.png"><p>T-14</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ships -->
+    <div>
+      <h2>Warships</h2>
+
+      <div class="scroll-wrapper">
+        <a href="#s1" class="arrow left">❮</a>
+        <a href="#s9" class="arrow right">❯</a>
+
+        <div class="card-container">
+          <div id="s1" class="card"><img src="photos/zumwalt.png"><p>Zumwalt</p></div>
+          <div class="card"><img src="photos/arleign.png"><p>Burke</p></div>
+          <div class="card"><img src="photos/gerald.png"><p>Ford</p></div>
+          <div class="card"><img src="photos/queen.png"><p>Queen</p></div>
+          <div class="card"><img src="photos/ins.png"><p>Vikrant</p></div>
+          <div class="card"><img src="photos/admiral.png"><p>Gorshkov</p></div>
+          <div class="card"><img src="photos/055.png"><p>Type 055</p></div>
+          <div class="card"><img src="photos/kondo.png"><p>Kongo</p></div>
+          <div id="s9" class="card"><img src="photos/charles.png"><p>Charles</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider-line"></div>
+<style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+    
+
+    <!-- Signup -->
+    
+    <section id="signup">
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="56" height="34" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/>
+</svg>Enlist for Battle</h2>
+
+        <form>
+            <table cellpadding="10" cellspacing="30">
+                <tr>
+                    <td >
+                        <img src="photos/battle.jpg" width="300" height="360">
+                    </td>
+                
+            <td><table cellpadding="10">
+                <tr>
+                    <td>Soldier Name:</td>
+                    <td><input type="text" size="25" required></td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" size="25" required></td>
+                </tr>
+
+                <tr>
+                    <td>Preferred Role:</td>
+                    <td>
+                        <select>
+                            <option>Infantry</option>
+                            <option>Sniper</option>
+                            <option>Pilot</option>
+                            <option>Tank</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Experience:</td>
+                    <td>
+                        <input type="radio" name="exp"> Beginner
+                        <input type="radio" name="exp"> Skilled
+                        <input type="radio" name="exp"> Veteran
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="DEPLOY NOW">
+                    </td>
+                </tr>
+            </table></td>
+            <td >
+                 <img src="photos/battle.jpg" width="300" height="360">
+            </td>
+
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <style>
+        
+/* SECTION BACKGROUND */
+#signup {
+  background:linear-gradient(
+  to top,
+  #2a1a4a,
+    #0f062c,
+    #2a1a4a
+
+); /* clean dark gaming */
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* HEADING */
+#signup h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FORM BOX (GLASS LOOK) */
+#signup table {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* INPUTS */
+#signup input[type="text"],
+#signup input[type="email"],
+#signup select {
+  width: 250px;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+/* RADIO */
+#signup input[type="radio"] {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+/* SUBMIT BUTTON */
+#signup input[type="submit"] {
+  background: #a855f7;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* BUTTON HOVER */
+#signup input[type="submit"]:hover {
+  background: #9333ea;
+  box-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
+    </style>
+
+
+    <div class="divider-line"></div>
+    <style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+
+
+
+    <style>
+        .enlist-section {
+  background: linear-gradient(to bottom, #2a1a4a, #3b2c6d);
+  padding: 50px;
+  color: white;
+  text-align: center;
+}
+
+.enlist-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.enlist-form {
+  display: inline-block;
+  text-align: left;
+}
+
+.enlist-form input,
+.enlist-form select {
+  width: 250px;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.enlist-form input {
+  background: #1e1b2e;
+  color: white;
+}
+
+.enlist-form select {
+  background: #1e1b2e;
+  color: white;
+}
+
+.enlist-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #a855f7, #9333ea);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.enlist-form button:hover {
+  box-shadow: 0 0 15px rgba(168,85,247,0.7);
+}
+
+
+.partner-section {
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 0;
+}
+
+
+.partner-section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 44px;              /* bigger */
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: capitalize;
+  color:white;
+   text-shadow: 
+    0 0 10px rgba(168,85,247,0.8),
+    0 0 20px rgba(168,85,247,0.6);
+
+  margin-bottom: 10px;
+}
+
+.partner-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #cfcfcf;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+ 
+}
+
+/* cards container */
+.partner-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* card */
+.partner-card {
+  width: 260px;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid #1f2937;
+  animation: float 4s ease-in-out infinite;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input:checked + .partner-card {
+  transform: scale(1.05);
+  border: 2px solid #c084fc;
+  box-shadow: 
+  0 0 10px rgba(168,85,247,0.8),
+  0 0 20px rgba(168,85,247,0.7),
+  0 0 40px rgba(168,85,247,0.6),
+  0 0 60px rgba(168,85,247,0.4);
+}
+
+/* premium card highlight */
+.partner-card.premium {
+  border: 2px solid gold;
+  animation-delay: 1s;
+}
+
+/* image placeholder */
+.partner-card .card-image {
+  height: 140px;
+  background: #374151;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* text */
+.partner-card h3 {
+  margin-bottom: 10px;
+}
+
+.partner-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* button */
+.partner-card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #6d28d9, #9333ea);
+  color: white;
+  cursor: pointer;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.partner-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.partner-section {
+  background: linear-gradient(
+    to bottom,
+    #2a1a4a,
+    #3b2c6d,
+    #2a1a4a
+  );
+ 
+}
+    </style>
+
+
+    <section class="partner-section">
+
+  <h1>Be Partner With Us</h1>
+  <p>Get premium updates and early access to the game</p>
+
+  <div class="partner-cards">
+
+    <!-- Card 1 -->
+    
+        <input type="radio" name="plan" id="card1" hidden>
+  <label for="card1" class="partner-card">
+      <img src="photos/earlyaccess.png" class="card-image">
+
+      <h3>Early Access Pack</h3>
+      <p>Get early gameplay access, exclusive missions and insider updates.</p>
+
+      <button>Join for ₹499/mo</button>
+  </label>
+    
+
+    <!-- Card 2 -->
+    
+        <input type="radio" name="plan" id="card2" hidden>
+  <label for="card2" class="partner-card premium">
+      <img src="photos/elite.png" class="card-image">
+
+      <h3>Elite Partner</h3>
+      <p>Unlock all features, priority updates and premium rewards.</p>
+
+      <button>Join for ₹1699/mo</button>
+    </label>
+    
+
+  </div>
+
+</section>
+
+
+
+<div class="divider-line"></div>
+<style>
+    .divider-line {
+  width: 100%;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+}
+</style>
+
+    <!-- Footer -->
+    <footer class="final-footer">
+
+        
+        <p>© 2026 Battlefield Command | Air & Ground Warfare Project</p>
+        
+
+  <!-- Top Section -->
+   <style>
+    .final-footer {
+  background: linear-gradient(180deg, #2a1a5e, #000);
+  color: white;
+  padding: 40px 20px;
+  margin-top: 0;
+  font-family: Arial;
+}
+
+/* top */
+.final-footer .footer-top h2 {
+  margin: 20px 0 10px;
+}
+
+.final-footer .icons i {
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  display: inline-block;
+  margin: 0 20px;
+  
+}
+
+.final-footer .icons i:hover {
+  color: #a855f7;   /* purple glow */
+  transform: scale(1.2);
+}
+
+
+
+/* links */
+.final-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.final-footer .footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* logos */
+.final-footer .footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+/* bottom */
+.final-footer .footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.final-footer button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* dropdown container */
+.final-footer .language-dropdown {
+  width: 220px;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* selected box */
+.final-footer .selected {
+  background: #2b2350;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* dropdown list */
+.final-footer .options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #2b2350;
+  border-radius: 15px;
+  top: 100%;        /* attach directly below */
+  left: 0;
+  
+  margin-top: 0;    /* REMOVE GAP */
+  
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* options */
+.final-footer .options div {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.final-footer .options div:hover {
+  background: #3d2f6d;
+}
+
+/* SHOW ON HOVER (no JS) */
+.final-footer .language-dropdown:hover .options,
+.final-footer .options:hover {
+  display: block;
+}
+
+   </style>
+<section id="support"
+  <div class="footer-top">
+    <h2>Join the community</h2>
+    <div class="icons">
+    <i class="fa-brands fa-discord"></i>
+    <i class="fa-solid fa-comment"></i>
+    </div>
+
+    <h2>Stay tuned</h2>
+    <div class="icons">
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-reddit-alien"></i>
+    <i class="fa-brands fa-tiktok"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    </div>
+
+    <h2>Language</h2>
+    <div class="language-dropdown">
+  <div class="selected">English</div>
+
+  <div class="options">
+    <div>English</div>
+    <div>हिन्दी</div>
+    <div>العربية</div>
+    <div>中文</div>
+    <div>Français</div>
+  </div>
+</div>
+  </div>
+
+  <!-- Divider -->
+  <hr>
+
+  <!-- Links -->
+  <div class="footer-links">
+    <a href="#">LEGAL</a>
+    <a href="#">TERMS OF USE</a>
+    <a href="#">PRIVACY POLICY</a>
+    <a href="#">CAREERS</a>
+    <a href="#">COOKIE POLICY</a>
+    <a href="#">SUPPORT</a>
+    <a href="#">CODE OF CONDUCT</a>
+  </div>
+
+  <!-- Logos -->
+  <div class="footer-logos">
+    <span>ACTIVISION</span>
+    <span>TREYARCH</span>
+    <span>SLEDGEHAMMER</span>
+    <span>HIGH MOON</span>
+    <span>DIGITAL LEGENDS</span>
+    <span>SHANGHAI STUDIO</span>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 Battlefield Command</p>
+    <button>COOKIE SETTINGS</button>
+  </div>
+  <section
+</footer>
+</center>
+</body>
+</html>
